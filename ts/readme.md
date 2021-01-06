@@ -27,5 +27,6 @@ npm run build
 
 ## Unit test
 ```sh
-todo ...
+# Run mocha
+npm test
 ```
