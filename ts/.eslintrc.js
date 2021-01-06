@@ -8,7 +8,7 @@ module.exports = {
     //
     // browser: true,
     node: true,
-    // mocha: true,
+    mocha: true,
     // jest: true,
     // jquery: true
   },
