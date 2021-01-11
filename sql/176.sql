@@ -1,10 +1,9 @@
 select ifnull(
   (
-    select Salary from
-      (
-        select Salary from Employee group by Salary
-      ) as t 
-    order by Salary desc 
+    select Salary from 
+    (
+      select Salary from Employee group by Salary order by Salary desc
+    ) as t 
     limit 1 
     offset 1
   ), 
