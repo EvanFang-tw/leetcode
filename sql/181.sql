@@ -9,9 +9,9 @@ select e3.Name as Employee from (
 where e3.Salary > ManagerSalary;
 
 -- Solution 2
-select tt.Employee from (
-	select e1.Name as Employee, e1.Salary, e2.Salary as ManagerSalary from Employee as e1
-	left join Employee as e2
-	on e1.ManagerId = e2.id
-) as tt
-where tt.Salary > tt.ManagerSalary;
+select e1.Name as Employee
+from Employee as e1
+left join Employee as e2
+on e1.ManagerId = e2.id
+where e1.Salary > e2.Salary;
+;
