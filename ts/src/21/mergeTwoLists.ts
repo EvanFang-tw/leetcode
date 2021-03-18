@@ -31,11 +31,8 @@ export function mergeTwoLists(
     currentPtr = newNode;
   }
   //
-  while (ptr2 !== null) {
-    const newNode = new ListNode(ptr2.val);
-    currentPtr.next = newNode;
-    currentPtr = newNode;
-    ptr2 = ptr2.next;
+  if (ptr2 !== null) {
+    currentPtr.next = ptr2;
   }
   //
   return head.next;
